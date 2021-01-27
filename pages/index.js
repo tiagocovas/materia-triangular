@@ -1,41 +1,96 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router'
+import Layout from '../components/Layout'
 
-function Home() {
-    const router = useRouter()
+const Index = ({ posts, title, description, ...props }) => {
 
-    const HandleClick = (e) => {
-        e.preventDefault()
-        router.push('/pokemon')
-    }
-
-    return (
+  return (
+    <>
+      <Layout>
+        <img src="/background.jpg" /> 
+        <main>
         
-        <>
-            <Head>
-                <title>Materia Triangular</title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            </Head>
-            <div class="row-full mx-auto p-5">
-                <nav class="flex justify-between">
-                    <div>
-                        <a href="#">Logo</a>
-                    </div>
-                    <ul class="flex flex-row">
-                        <li class="pr-5"><a> Services </a></li>
-                        <li class="pr-5"><a>Porfolio</a></li>
-                        <li class="pr-5"><a>About</a></li>
-                        <li><a>Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <h1>Home</h1>
-                <h2>Materia Triangular</h2>
-            </div>
-        </>
+          <div className="items">
+            <div>arc.</div>
+            <div>imag.</div>
+            <div>edu.</div>
+          </div>
 
-    )
+          <div className="icons">
+            <a href=""><i className="icon-facebook"></i></a>
+            <a href=""><i className="icon-instagram"></i></a>
+            <a href=""><i className="icon-twitter"></i></a>
+            <div className="contacts">
+              <div>susana.vassalo@materia-triangular.pt | 93123456</div>
+              <div>paulo.pinto@materia-triangular.pt | 93123456</div>
+            </div>
+          </div>
+
+
+
+        </main>
+      </Layout>
+      <style jsx>{`      
+        .title {
+          margin: 1rem auto;
+          font-size: 3rem;
+        }
+
+        main {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        img {
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          object-fit: cover;
+        }
+
+        .items {
+          font-weight: 600;
+          color: #feea34;
+          font-size: 26px;
+          margin-left: 20px;
+        }
+
+        .icons {
+          
+          margin: 0 20px;
+          font-size: 26px;
+          
+        }
+
+        a {
+          text-decoration: none;
+          color: #feea34;
+          cursor: pointer;
+        }
+
+        .icons i:hover {
+          color: white;
+          transition: all ease-out .4s;
+        }
+
+        .icons i {
+          margin-right: 14px;
+        }
+
+        .contacts  {
+          color: #feea34;
+          font-size: 12px;
+
+          margin-top: 10px;
+        }
+
+      `}</style>
+    </>
+  )
 }
 
-export default Home
+export default Index

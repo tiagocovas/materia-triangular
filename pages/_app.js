@@ -1,6 +1,6 @@
 import '../styles.css'
-import 'tailwindcss/tailwind.css';
 
-export default function Application({ Component, pageProps }) {
-    return <Component {...pageProps} /> 
+// This default export is required in a new `pages/_app.js` file.
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
 }
