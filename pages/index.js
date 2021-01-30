@@ -15,16 +15,13 @@ const Index = ({ posts, title, description, ...props }) => {
           </div>
 
           <div className="icons">
-            <a href=""><i className="icon-facebook"></i></a>
-            <a href=""><i className="icon-instagram"></i></a>
-            <a href=""><i className="icon-twitter"></i></a>
+            <a href="https://www.facebook.com/materiatriangular/"><i className="icon-facebook"></i></a>
+            <a href="https://www.instagram.com/matt_arc_imag_edu/"><i className="icon-instagram"></i></a>
             <div className="contacts">
-              <div>susana.vassalo@materia-triangular.pt | 93123456</div>
-              <div>paulo.pinto@materia-triangular.pt | 93123456</div>
+              <div>susanavassalo@materiatriangular.pt | 914 912 977</div>
+              <div>paulopinto@materiatriangular.pt | 917 658 899</div>
             </div>
           </div>
-
-
 
         </main>
       </Layout>
@@ -86,7 +83,11 @@ const Index = ({ posts, title, description, ...props }) => {
           font-size: 12px;
 
           margin-top: 10px;
+
+          line-height: 18px;
         }
+
+        .contacts 
 
       `}</style>
     </>
